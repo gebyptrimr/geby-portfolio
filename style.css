@@ -336,7 +336,7 @@ ul,ol{list-style:none}
 .contact-list a:hover{border-color:var(--blue-soft)}
 
 /* ===== SLIDE TERAKHIR ===== */
-.footer{background:linear-gradient(90deg,rgba(7,20,38,.97) 25%,rgba(7,20,38,.6)),url(assets/footer-bg.jpg) center/cover,#050d1a}
+.footer{background:linear-gradient(90deg,rgba(7,20,38,.97) 25%,rgba(7,20,38,.6)),url(footer-bg.jpg) center/cover,#050d1a}
 .footer-social{margin-top:28px}
 .footer-bottom .open{display:inline-flex;align-items:center;gap:8px}
 .dot{width:7px;height:7px;background:var(--blue-light);transform:rotate(45deg);animation:pulse-dot 2s ease-in-out infinite}
