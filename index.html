@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Geby Putri Maharani — Web Programmer Portfolio">
+<title>Geby Putri Maharani — Web Programmer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Ikon SVG (dipakai ulang dengan <use>) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-gh" viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13Zm2.3.5L12 11.9 19.7 6H4.3ZM20 7.9l-7.4 5.7a1 1 0 0 1-1.2 0L4 7.9V18h16V7.9Z"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 9 12 4 2 9l10 5 10-5Z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-5 4 5 4"/><path d="m16 8 5 4-5 4"/><path d="m14 5-4 14"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7L12 3Z"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></symbol>
+</svg>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container navbar-inner">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+    <a href="#home" class="logo">GP</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <label for="menu-toggle" class="burger" aria-hidden="true"><i></i><i></i><i></i></label>
+  </div>
+</header>
+
+<main>
+
+<!-- 01 HERO -->
+<section id="home" class="hero">
+  <div class="hero-grid"></div>
+  <div class="container hero-container">
+    <div class="hero-content">
+      <div class="eyebrow"><span class="eyebrow-line"></span><span>HELLO, I'M</span></div>
+      <h1>Geby Putri <span>Maharani</span></h1>
+      <h2>Web Programmer</h2>
+      <p class="hero-description">I build web-based applications and digital solutions with modern technologies, focusing on functional, responsive, and user-focused experiences.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View My Projects <span>→</span></a>
+        <a href="assets/CV.pdf" class="btn btn-secondary" download>Download CV <span>↓</span></a>
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/gebyptrimr" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg><use href="#i-gh"/></svg></a>
+        <a href="https://www.linkedin.com/in/geby-putri-maharani-7071672b2" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a>
+        <a href="mailto:gebyputrimaharani05@gmail.com" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="visual-glow"></div>
+      <div class="code-window">
+        <div class="window-header">
+          <div class="window-dots"><span></span><span></span><span></span></div>
+          <div class="window-title">developer.js</div>
+        </div>
+        <pre class="code-content"><code><b class="blue">const</b> developer = <b class="white">{</b>
+  name: <b class="light-blue">"Geby"</b>,
+  role: <b class="light-blue">"Web Programmer"</b>,
+  stack: <b class="white">[</b>
+    <b class="green">"React.js"</b>,
+    <b class="green">"Laravel"</b>,
+    <b class="green">"Supabase"</b>
+  <b class="white">]</b>
+<b class="white">};</b><span class="cursor"></span></code></pre>
+      </div>
+
+      <div class="browser-window">
+        <div class="browser-header">
+          <div class="browser-dots"><span></span><span></span><span></span></div>
+          <div class="browser-url">geby.dev</div>
+        </div>
+        <div class="browser-body">
+          <div class="mock-sidebar">
+            <div class="mock-logo">GP</div>
+            <div class="sidebar-line active"></div><div class="sidebar-line"></div><div class="sidebar-line"></div><div class="sidebar-line"></div>
+          </div>
+          <div class="mock-dashboard">
+            <div class="dashboard-top">
+              <div><div class="mock-small-text">Dashboard</div><div class="mock-title">Overview</div></div>
+              <div class="mock-avatar">G</div>
+            </div>
+            <div class="dashboard-cards">
+              <div class="dashboard-card"><span></span><strong></strong></div>
+              <div class="dashboard-card"><span></span><strong></strong></div>
+              <div class="dashboard-card"><span></span><strong></strong></div>
+            </div>
+            <div class="dashboard-chart">
+              <div class="chart-title">System Overview</div>
+              <div class="chart-bars">
+                <span style="height:35%"></span><span style="height:55%"></span><span style="height:45%"></span><span style="height:70%"></span><span style="height:62%"></span><span style="height:85%"></span><span style="height:75%"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tech-badge react-badge">React.js</div>
+      <div class="tech-badge laravel-badge">Laravel</div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-indicator"><span class="scroll-arrow">↓</span><span>Scroll to explore</span></a>
+</section>
+
+<!-- 02 ABOUT -->
+<section id="about" class="section light">
+  <div class="container">
+    <p class="kicker">02. About Me</p>
+    <h2 class="title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I am a Web Programmer with a background in Informatics and Computer Engineering Education, focused on developing web-based applications and digital solutions.</p>
+        <p>My experience includes building administrative information systems, designing responsive interfaces, and working with modern web technologies to turn ideas and requirements into functional products.</p>
+      </div>
+      <figure class="about-photo"><img src="assets/foto-geby.png" alt="Foto Geby Putri Maharani" loading="lazy"></figure>
+    </div>
+    <div class="facts">
+      <div class="fact"><span class="fact-ico"><svg aria-hidden="true"><use href="#i-cap"/></svg></span><div><small>Education</small><b>Informatics &amp; Computer Engineering Education</b></div></div>
+      <div class="fact"><span class="fact-ico"><svg aria-hidden="true"><use href="#i-code"/></svg></span><div><small>Focus</small><b>Web Development</b></div></div>
+      <div class="fact"><span class="fact-ico"><svg aria-hidden="true"><use href="#i-pin"/></svg></span><div><small>Based in</small><b>Makassar, South Sulawesi</b></div></div>
+      <div class="fact"><span class="fact-ico"><svg aria-hidden="true"><use href="#i-brief"/></svg></span><div><small>Seeking</small><b>Web Programmer role</b></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 SKILLS -->
+<section id="skills" class="section light alt">
+  <div class="container">
+    <p class="kicker">03. Technologies I Work With</p>
+    <h2 class="title">Tech Stack</h2>
+    <p class="lead">I work with a range of modern technologies to build efficient and maintainable web applications.</p>
+    <div class="stack-layout">
+      <div class="stack-grid">
+        <div class="stack-card"><h3>Frontend</h3><ul class="logos"><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" width="40" height="40" loading="lazy"><span>HTML</span></li><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" width="40" height="40" loading="lazy"><span>CSS</span></li><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" width="40" height="40" loading="lazy"><span>JavaScript</span></li><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" width="40" height="40" loading="lazy"><span>React</span></li></ul></div>
+        <div class="stack-card"><h3>Backend</h3><ul class="logos"><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="" width="40" height="40" loading="lazy"><span>PHP</span></li><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="" width="40" height="40" loading="lazy"><span>Laravel</span></li></ul></div>
+        <div class="stack-card"><h3>Database</h3><ul class="logos"><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" width="40" height="40" loading="lazy"><span>MySQL</span></li><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="" width="40" height="40" loading="lazy"><span>Supabase</span></li><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg" alt="" width="40" height="40" loading="lazy"><span>Firebase</span></li></ul></div>
+        <div class="stack-card"><h3>Tools</h3><ul class="logos"><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" width="40" height="40" loading="lazy"><span>Git</span></li><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="" width="40" height="40" loading="lazy"><span>GitHub</span></li><li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="" width="40" height="40" loading="lazy"><span>VS Code</span></li></ul></div>
+      </div>
+      <aside class="core-panel">
+        <h3>Core Stack</h3><ul><li>React</li><li>Laravel</li><li>PHP</li><li>MySQL</li></ul>
+        <h3>Supporting Tools</h3><ul><li>Git</li><li>GitHub</li><li>VS Code</li></ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 04 PROJECTS -->
+<section id="projects" class="section light">
+  <div class="container">
+    <p class="kicker">04. Featured Projects</p>
+    <h2 class="title">My Projects</h2>
+    <div class="section-head"><p class="lead">Here are some of the projects I've worked on, whether during internship, coursework, or personal development.</p><a href="https://github.com/gebyptrimr?tab=repositories" class="view-all" target="_blank" rel="noopener noreferrer">View All Projects <span>→</span></a></div>
+    <div class="project-grid">
+      <article class="project">
+        <div class="thumb"><img src="assets/sipas-dashboard.png" alt="Dashboard SIPAS LP2M UNM" loading="lazy"></div>
+        <h3>LP2M UNM</h3><p class="sub">Archive Information System</p>
+        <ul class="chips small"><li>React</li><li>Laravel</li><li>MySQL</li></ul>
+        <p>A web-based archive management system to manage incoming/outgoing correspondence, contracts, assignments, decrees, and archive retention.</p>
+        <div class="project-foot"><a href="#case-study" class="more">View Details →</a><a href="https://github.com/gebyptrimr/arsip-persuratan" class="gh" target="_blank" rel="noopener noreferrer" aria-label="GitHub SIPAS" title="GitHub"><svg><use href="#i-gh"/></svg></a></div>
+      </article>
+      <article class="project">
+        <div class="thumb navy"><img src="assets/rental-thumb.png" alt="Tampilan aplikasi Apartment Rental" loading="lazy"></div>
+        <h3>Apartment Rental App</h3><p class="sub">Mobile Application</p>
+        <ul class="chips small"><li>Java</li><li>Firebase</li></ul>
+        <p>An Android application for apartment rental information and management with user-friendly features.</p>
+        <div class="project-foot"><a href="#rental-preview" class="more">View Details →</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 05 CASE STUDY -->
+<section id="case-study" class="section dark">
+  <div class="container">
+    <div class="cs-head">
+      <div>
+        <p class="kicker">05. Project Case Study</p>
+        <h2 class="title">LP2M UNM – Archive Information System (SIPAS)</h2>
+        <p class="lead">A web-based system for managing institutional documents and archival records.</p>
+      </div>
+      <div class="cs-actions"><a href="#projects" class="btn btn-secondary">← Back to Projects</a><a href="https://github.com/gebyptrimr/arsip-persuratan" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+    </div>
+    <input class="cs-radio" type="radio" name="cs" id="t1" aria-label="Overview" checked><input class="cs-radio" type="radio" name="cs" id="t2" aria-label="Problem"><input class="cs-radio" type="radio" name="cs" id="t3" aria-label="My Role"><input class="cs-radio" type="radio" name="cs" id="t4" aria-label="Technology"><input class="cs-radio" type="radio" name="cs" id="t5" aria-label="Development Process"><input class="cs-radio" type="radio" name="cs" id="t6" aria-label="Key Features"><input class="cs-radio" type="radio" name="cs" id="t7" aria-label="Challenge &amp; Solution"><input class="cs-radio" type="radio" name="cs" id="t8" aria-label="Result">
+    <div class="cs-layout">
+      <nav class="cs-nav" aria-label="Case study"><label for="t1"><b class="n">01</b><span>Overview</span></label><label for="t2"><b class="n">02</b><span>Problem</span></label><label for="t3"><b class="n">03</b><span>My Role</span></label><label for="t4"><b class="n">04</b><span>Technology</span></label><label for="t5"><b class="n">05</b><span>Development Process</span></label><label for="t6"><svg class="n-ico" aria-hidden="true"><use href="#i-star"/></svg><span>Key Features</span></label><label for="t7"><svg class="n-ico" aria-hidden="true"><use href="#i-bulb"/></svg><span>Challenge &amp; Solution</span></label><label for="t8"><svg class="n-ico" aria-hidden="true"><use href="#i-check"/></svg><span>Result</span></label></nav>
+      <div class="cs-body"><div class="cs-panel" id="p1"><div class="cs-shot"><img src="assets/sipas-dashboard.png" alt="Dashboard SIPAS" loading="lazy"></div>
+<h3>01. Overview</h3>
+<p>LP2M UNM is a web-based archival information system (SIPAS) designed to manage institutional documents such as incoming and outgoing correspondence, contracts, assignments, decisions, and archive retention.</p>
+<dl class="cs-meta"><div><dt>Role</dt><dd>Web Development Intern</dd></div><div><dt>Period</dt><dd>Jun – Aug 2026</dd></div><div><dt>Stack</dt><dd>React.js, Laravel, Supabase</dd></div></dl>
+<h4>Key Features</h4><div class="cs-features"><div><i>▤</i><b>Document Management</b><span>Add and manage incoming/outgoing letters, assignments, decrees, and contracts.</span></div><div><i>▦</i><b>Archive Categorization</b><span>Archives grouped by field: policy, finance, research, community service, publications, and more.</span></div><div><i>⌕</i><b>Search &amp; Filter</b><span>Find an archive by number or subject; see the latest entries at a glance.</span></div><div><i>◷</i><b>Retention Management</b><span>A dedicated menu to track how long each archive must be kept.</span></div></div></div><div class="cs-panel" id="p2"><h3>02. Problem</h3>
+<div class="cs-split"><div>
+<p>LP2M handles documents from many fields at the same time: correspondence, assignment letters, decrees, and contracts, alongside research, community service (PKM), publications and IPR, finance, and general administration. Each type needs consistent handling.</p>
+<ul class="cs-list"><li><b>Classification.</b> Many categories and sub-categories have to stay consistent.</li><li><b>Findability.</b> Staff need to locate a letter quickly by its number or subject.</li><li><b>Retention.</b> Archives must follow a retention period instead of piling up indefinitely.</li></ul>
+</div><img class="cs-side" src="assets/sipas-menu.png" alt="Menu kategori arsip SIPAS" loading="lazy"></div></div><div class="cs-panel" id="p3"><h3>03. My Role</h3>
+<p>Web Development Intern at LP2M Universitas Negeri Makassar (Jun – Aug 2026), working on both the interface and the data side of the system.</p>
+<ul class="cs-list"><li>Built the React interface foundation: sidebar, navbar, and routing.</li><li>Developed the dashboard and connected it to backend data.</li><li>Designed the archive classification UI/UX.</li><li>Designed the normalized database schema that supports retention logic.</li><li>Implemented document management for incoming/outgoing letters, assignment letters, decrees, and contracts.</li></ul></div><div class="cs-panel" id="p4"><h3>04. Technology</h3>
+<div class="cs-cards"><div><small>Frontend</small><b>React.js</b><span>Components, routing, dashboard UI</span></div><div><small>Backend</small><b>Laravel</b><span>Application logic and API</span></div><div><small>Data</small><b>Supabase</b><span>Database and platform services</span></div></div></div><div class="cs-panel" id="p5"><h3>05. Development Process</h3><ol class="cs-steps"><li><b>Interface &amp; structure</b><span>Built the layout foundation in React: sidebar, navbar, and the routing architecture.</span></li><li><b>Data design</b><span>Designed a normalized database schema, including the logic behind archive retention.</span></li><li><b>Dashboard integration</b><span>Connected the dashboard to backend data: archive counts, category distribution, and latest archives.</span></li><li><b>Classification UX</b><span>Designed the archive classification flow and the forms for adding and managing documents.</span></li></ol></div><div class="cs-panel" id="p6"><h3>06. Key Features</h3><img class="cs-wide" src="assets/sipas-stats.png" alt="Ringkasan arsip di dashboard SIPAS" loading="lazy"><div class="cs-features f3"><div><i>▤</i><b>Document Management</b><span>Add and manage incoming/outgoing letters, assignments, decrees, and contracts.</span></div><div><i>▦</i><b>Archive Categorization</b><span>Archives grouped by field: policy, finance, research, community service, publications, and more.</span></div><div><i>⌕</i><b>Search &amp; Filter</b><span>Find an archive by number or subject; see the latest entries at a glance.</span></div><div><i>◷</i><b>Retention Management</b><span>A dedicated menu to track how long each archive must be kept.</span></div><div><i>▥</i><b>Dashboard Summary</b><span>Archive counts per type and a distribution chart by category.</span></div><div><i>◉</i><b>Account Management</b><span>Administrator account and user access in one menu.</span></div></div></div><div class="cs-panel" id="p7"><h3>07. Challenge &amp; Solution</h3>
+<div class="cs-two"><div><small>Challenge</small><p>Every document type shares a common structure but differs in category and retention period, so handling each type separately would have meant duplicated logic and inconsistent data.</p></div>
+<div><small>Solution</small><p>Modeled archives, categories, and retention rules in a normalized schema, so retention follows from the data model rather than from separate code for each document type.</p></div></div></div><div class="cs-panel" id="p8"><h3>08. Result</h3>
+<div class="cs-cards"><div><b>Central archive</b><span>One system for classifying, searching, and tracking retention of institutional documents.</span></div><div><b>Live dashboard</b><span>Counts per document type, a distribution chart, and the latest archives in one view.</span></div><div><b>Open source code</b><span>Repository available on GitHub for review.</span></div></div>
+<a href="https://github.com/gebyptrimr/arsip-persuratan" class="btn btn-secondary cs-gh" target="_blank" rel="noopener noreferrer">View repository on GitHub</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 EXPERIENCE -->
+<section id="experience" class="section light alt">
+  <div class="container">
+    <p class="kicker">06. Experience &amp; Activities</p>
+    <h2 class="title">My Experience</h2>
+    <p class="lead">A glimpse of my professional journey and activities that have shaped my skills and mindset.</p>
+    <ol class="timeline">
+      <li>
+        <span class="tl-ico main"><svg aria-hidden="true"><use href="#i-code"/></svg></span>
+        <h3>Web Development Intern <span>— LP2M Universitas Negeri Makassar</span></h3>
+        <small>Jun – Aug 2026</small>
+        <ul>
+          <li>Developed a web-based archive management system using React.js, Laravel, and Supabase.</li>
+          <li>Implemented document management for incoming/outgoing letters, assignment letters, decrees, contracts, and document retention.</li>
+          <li>Developed dashboard and navigation features.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="tl-ico"><svg aria-hidden="true"><use href="#i-cap"/></svg></span>
+        <h3>Teaching Assistant <span>— Universitas Negeri Makassar</span></h3>
+        <small>Aug 2025 – Jan 2026</small>
+        <ul>
+          <li>Assisted lecturers in Microprocessor Systems practical learning.</li>
+          <li>Supported students in completing practical exercises and troubleshooting issues.</li>
+        </ul>
+      </li>
+      <li>
+        <span class="tl-ico"><svg aria-hidden="true"><use href="#i-user"/></svg></span>
+        <h3>OSIS Chairperson <span>— SMK Negeri 7 Bone</span></h3>
+        <small>2021 – 2022</small>
+        <ul>
+          <li>Coordinated student organization programs and activities.</li>
+          <li>Collaborated with students and school stakeholders in organizing initiatives.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 07 CONTACT -->
+<section id="contact" class="section dark">
+  <div class="container contact-grid">
+    <div>
+      <p class="kicker">07. Contact</p>
+      <h2 class="title">Let's Build Something.</h2>
+      <p class="lead">I'm currently open to opportunities in web development and software engineering.</p>
+      <ul class="contact-list">
+        <li><span class="ico"><svg><use href="#i-mail"/></svg></span><div><small>Email</small><a href="mailto:gebyputrimaharani05@gmail.com">gebyputrimaharani05@gmail.com</a></div></li>
+        <li><span class="ico"><svg><use href="#i-in"/></svg></span><div><small>LinkedIn</small><a href="https://www.linkedin.com/in/geby-putri-maharani-7071672b2" target="_blank" rel="noopener noreferrer">linkedin.com/in/geby-putri-maharani</a></div></li>
+        <li><span class="ico"><svg><use href="#i-gh"/></svg></span><div><small>GitHub</small><a href="https://github.com/gebyptrimr" target="_blank" rel="noopener noreferrer">github.com/gebyptrimr</a></div></li>
+      </ul>
+      <a href="assets/CV.pdf" class="btn btn-secondary" download>Download CV <span>↓</span></a>
+    </div>
+    <form class="contact-form" action="mailto:gebyputrimaharani05@gmail.com?subject=Pesan%20dari%20portofolio" method="post" enctype="text/plain">
+      <label>Name<input type="text" name="name" placeholder="Your name" required></label>
+      <label>Email<input type="email" name="email" placeholder="Your email address" required></label>
+      <label>Message<textarea name="message" rows="5" placeholder="Type your message..." required></textarea></label>
+      <button type="submit" class="btn btn-primary">Send Message <span>→</span></button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- 08 THANK YOU -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <p class="kicker">Thanks for visiting!</p>
+      <h2>Let's Build<br>Better Solutions<br>Together.</h2>
+      <p class="who"><b>Geby Putri Maharani</b><br>Web Programmer</p>
+      <div class="social-links footer-social">
+        <a href="https://github.com/gebyptrimr" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg><use href="#i-gh"/></svg></a>
+        <a href="https://www.linkedin.com/in/geby-putri-maharani-7071672b2" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg><use href="#i-in"/></svg></a>
+        <a href="mailto:gebyputrimaharani05@gmail.com" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
+      </div>
+    </div>
+    <span class="sign" aria-hidden="true">Geby</span>
+    <div class="footer-bottom">
+      <p>© 2026 Geby Putri Maharani. All rights reserved.</p>
+      <a href="#contact" class="open">Open to opportunities <i class="dot"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Pratinjau Apartment Rental App (tanpa JS, memakai :target) -->
+<div id="rental-preview" class="lightbox" role="dialog" aria-label="Tampilan aplikasi Apartment Rental">
+  <a href="#projects" class="lb-bg" aria-label="Tutup"></a>
+  <figure>
+    <img src="assets/rental-full.png" alt="Delapan tampilan aplikasi Apartment Rental: login, daftar, beranda, daftar unit, notifikasi, profil, detail unit, dan jadwal check-in">
+    <figcaption>Apartment Rental App — Android (Java, Firebase)</figcaption>
+  </figure>
+  <a href="#projects" class="lb-x" aria-label="Tutup">✕</a>
+</div>
+
+</body>
+</html>
