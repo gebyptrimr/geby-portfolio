@@ -425,3 +425,53 @@ ul,ol{list-style:none}
 .tl-ico{position:absolute;left:-56px;top:-2px;width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:#dbeafe;color:var(--blue);box-shadow:0 0 0 4px var(--paper-alt)}
 .tl-ico.main{background:var(--blue);color:#fff}
 .tl-ico svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+
+/* ===== HEADER TETAP (fixed) ===== */
+.navbar{position:fixed;background:rgba(7,20,38,.9);border-bottom:1px solid var(--border);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.navbar-inner{height:72px}
+.nav-links a{color:rgba(255,255,255,.6)}
+.nav-links a:hover{color:#fff}
+.nav-links a::after{content:"";position:absolute;left:50%;bottom:-9px;transform:translateX(-50%);width:4px;height:4px;border-radius:50%;background:var(--blue-light);opacity:0}
+.cs-nav{top:96px}
+@keyframes nav-bg{from{background:transparent;border-color:transparent;backdrop-filter:blur(0)}to{background:rgba(7,20,38,.9);border-color:rgba(255,255,255,.12);backdrop-filter:blur(12px)}}
+@keyframes nav-on{0%,100%{color:rgba(255,255,255,.6)}12%,88%{color:#fff}}
+@keyframes nav-dot{0%,100%{opacity:0}12%,88%{opacity:1}}
+/* di hero header transparan, lalu menebal saat scroll; link aktif mengikuti section (tanpa JS) */
+@supports (animation-timeline:scroll()){
+  .navbar{animation:nav-bg linear both;animation-timeline:scroll(root block);animation-range:0px 140px}
+}
+@supports (timeline-scope:--a) and (animation-timeline:view()){
+  body{timeline-scope:--s-home,--s-about,--s-skills,--s-projects,--s-experience,--s-contact}
+  #home{view-timeline:--s-home}#about{view-timeline:--s-about}#skills{view-timeline:--s-skills}
+  #projects{view-timeline:--s-projects}#experience{view-timeline:--s-experience}#contact{view-timeline:--s-contact}
+  .nav-links a[href="#home"]{--tl:--s-home}.nav-links a[href="#about"]{--tl:--s-about}.nav-links a[href="#skills"]{--tl:--s-skills}
+  .nav-links a[href="#projects"]{--tl:--s-projects}.nav-links a[href="#experience"]{--tl:--s-experience}.nav-links a[href="#contact"]{--tl:--s-contact}
+  .nav-links a{animation:nav-on linear both;animation-timeline:var(--tl);animation-range:cover 25% cover 75%}
+  .nav-links a::after{animation:nav-dot linear both;animation-timeline:var(--tl);animation-range:cover 25% cover 75%}
+}
+
+/* menu mobile berbasis :target: tertutup otomatis saat link dipilih */
+.burger-close{display:none;font-size:15px;color:#fff}
+@media(max-width:950px){
+  .burger-open{display:flex}
+  .nav-links:target{display:flex;animation:up .3s both}
+  .nav-links:target~.burger-open{display:none}
+  .nav-links:target~.burger-close{display:flex;align-items:center;justify-content:center}
+  .nav-links a::after{display:none}
+}
+
+/* ===== ABOUT: lebih ringkas ===== */
+#about .about-grid{margin-top:28px;gap:40px}
+#about .about-photo{width:min(100%,300px)}
+#about .facts{margin-top:28px}
+
+/* ===== KONTAK: kartu sukses ===== */
+.honey{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.contact-ok{display:none;scroll-margin-top:110px;padding:40px 32px;border:1px solid rgba(96,165,250,.45);border-radius:14px;background:rgba(13,29,49,.72);text-align:center;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+.contact-ok:target{display:grid;justify-items:center;gap:14px;animation:up .5s cubic-bezier(.2,.7,.2,1) both}
+.contact-ok:target~.contact-form{display:none}
+.ok-ico{width:56px;height:56px;display:grid;place-items:center;border-radius:50%;background:rgba(34,197,94,.15);color:#4ade80}
+.ok-ico svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.contact-ok h3{font-size:20px}
+.contact-ok p{max-width:340px;color:var(--text-muted);font-size:13px;line-height:1.8}
