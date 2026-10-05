@@ -484,3 +484,12 @@ ul,ol{list-style:none}
 #t5:focus-visible~.cs-layout label[for=t5],#t6:focus-visible~.cs-layout label[for=t6],#t7:focus-visible~.cs-layout label[for=t7],#t8:focus-visible~.cs-layout label[for=t8]{outline:2px solid var(--blue-light);outline-offset:3px}
 .cs-hint{margin-top:10px;color:rgba(255,255,255,.35);font-size:11px}
 @media(hover:none){.cs-hint{display:none}}
+
+/* ===== HALAMAN PER HALAMAN: ↑ ↓ pindah ke slide berikutnya/sebelumnya (hanya layar laptop/desktop) ===== */
+@media(min-width:951px) and (hover:hover){
+  html{scroll-snap-type:y mandatory}
+  main>section,.footer{scroll-snap-align:start;scroll-snap-stop:always}
+  main>section.section{min-height:100vh;display:flex;align-items:center}
+  main>section.section>.container{width:min(1180px,calc(100% - 64px))}
+  .footer{min-height:100vh}
+}
