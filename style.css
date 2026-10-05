@@ -475,3 +475,12 @@ ul,ol{list-style:none}
 .ok-ico svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .contact-ok h3{font-size:20px}
 .contact-ok p{max-width:340px;color:var(--text-muted);font-size:13px;line-height:1.8}
+
+/* ===== KEYBOARD: tab case study dengan tombol panah ===== */
+/* radio dipasang tetap (fixed) agar fokusnya tidak membuat halaman melompat saat panah ditekan */
+.cs-radio{position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.cs-radio:focus-visible~.cs-layout .cs-nav{outline:0}
+#t1:focus-visible~.cs-layout label[for=t1],#t2:focus-visible~.cs-layout label[for=t2],#t3:focus-visible~.cs-layout label[for=t3],#t4:focus-visible~.cs-layout label[for=t4],
+#t5:focus-visible~.cs-layout label[for=t5],#t6:focus-visible~.cs-layout label[for=t6],#t7:focus-visible~.cs-layout label[for=t7],#t8:focus-visible~.cs-layout label[for=t8]{outline:2px solid var(--blue-light);outline-offset:3px}
+.cs-hint{margin-top:10px;color:rgba(255,255,255,.35);font-size:11px}
+@media(hover:none){.cs-hint{display:none}}
